@@ -1,0 +1,22 @@
+# Заданий список чисел
+numbers = [6, -7, 5, -9, -1, 10, 2, 3, -2, 9]
+
+# Знаходимо індекс найбільшого від'ємного елемента
+max_negative_index = -1
+max_negative_value = float("-inf")
+for i in range(len(numbers)):
+    if numbers[i] < 0 and numbers[i] > max_negative_value:
+        max_negative_index = i
+        max_negative_value = numbers[i]
+
+# Формуємо новий список, замінюючи елементи перед максимальним від'ємним на їх квадрати
+new_numbers = []
+for i in range(len(numbers)):
+    if i < max_negative_index:
+        new_numbers.append(numbers[i] ** 2)
+    else:
+        new_numbers.append(numbers[i])
+
+# Виводимо початковий і новий списки
+print("Початковий список: ", numbers)
+print("Новий список: ", new_numbers)
