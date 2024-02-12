@@ -20,3 +20,5 @@ for i in range(len(numbers)):
 # Виводимо початковий і новий списки
 print("Початковий список: ", numbers)
 print("Новий список: ", new_numbers)
+
+це програма
